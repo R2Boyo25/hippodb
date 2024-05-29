@@ -35,9 +35,7 @@ ServerInfo = TypedDict(
 )
 
 
-@router.get(
-    "/",
-)
+@router.get("/")
 def server_info() -> ServerInfo:
     return {
         "version": __version__,
