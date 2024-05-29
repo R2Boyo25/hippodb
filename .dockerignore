@@ -1,0 +1,12 @@
+venv
+.venv
+poetry.lock
+__pycache__
+*.py[coa]
+.vscode
+venv
+.mypy_cache
+poetry.lock
+.venv
+hippo_data
+*.md
