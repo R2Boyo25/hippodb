@@ -150,16 +150,6 @@ class HippoDB:
             for database in self.databases[application].values():
                 self.load_document_map(application, database.id)
 
-        pprint(
-            {
-                "applications": self.applications,
-                "tokens": self.tokens,
-                "databases": self.databases,
-                "documents": self.documents,
-            },
-            compact=True,
-        )
-
     def load_applications_file(self) -> None:
         if not self.hippo_dir.exists():
             self.hippo_dir.mkdir(parents=True)
