@@ -146,6 +146,9 @@ def process_db_name(name: str) -> str:
 
 @application.post("/create_db", tags=["database"])
 def new_database(app_view: ApplicationDependency, path: str) -> DatabaseInfo:
+    if not path.startswith("/"):
+        path = "/" + path
+
     return DatabaseInfo(path=HIPPODB.create_database(app_view.app_id, path).path)
 
 
